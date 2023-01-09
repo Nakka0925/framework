@@ -18,7 +18,7 @@ class ImageDataGenerator(object):
             for path, cls in zip(img_path, classes):
                 img = cv2.imread(path)
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                self.images.append(np.asarray(img) / 255)
+                self.images.append(1 - np.asarray(img, dtype=np.float32) / 255)
                 self.labels.append(cls)
 
                 if len(self.images) == batch_size:
