@@ -1,7 +1,7 @@
 destination : /home/nakanishi/sotuken/framework/
 creature_data_destination : /home/nakanishi/sotuken/machine-genome-classification/data/
 
-epochs : 1
+epochs : 20
 batch_size : 128    #未実装
 Droppout : True       #未実装
 cross_val : True #未実装
