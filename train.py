@@ -71,6 +71,7 @@ for idx in range(1,config['fold_num']+1):
     loss = history_dict['loss']
     val_loss = history_dict['val_loss']
 
+    #学習データをcsv化
     data = {'accuracy' : acc, 'val_accuracy' : val_acc, 'loss' : loss, 'val_loss' : val_loss}
     df = pd.DataFrame(data, columns=['accuracy', 'val_accuracy', 'loss', 'val_loss'])
     df.index = ['epoch ' + str(n) for n in range(1, config['epochs']+1)]
