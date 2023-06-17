@@ -3,9 +3,9 @@ import yaml
 import pandas as pd
 from tensorflow.keras import layers, models
 from tensorflow.keras.utils import plot_model
-from dataset import dataset_gain
-from f1score_gen import f1score_cacl
-from data_generator import ImageDataGenerator
+from tools.dataset import dataset_gain
+from tools.f1score_gen import f1score_cacl
+from tools.data_generator import ImageDataGenerator
 from pathlib import Path
 
 
@@ -42,7 +42,7 @@ for idx in range(1,config['fold_num']+1):
     model.add(layers.Dropout(0.3))
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dropout(0.3))
-    model.add(layers.Dense(49, activation='softmax'))
+    model.add(layers.Dense(51 activation='softmax'))
 
     plot_model(model, show_shapes=True, to_file='model.png')
 
