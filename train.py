@@ -42,7 +42,7 @@ for idx in range(1,config['fold_num']+1):
     model.add(layers.Dropout(0.3))
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dropout(0.3))
-    model.add(layers.Dense(51 activation='softmax'))
+    model.add(layers.Dense(51, activation='softmax'))
 
     plot_model(model, show_shapes=True, to_file='model.png')
 
